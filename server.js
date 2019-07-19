@@ -13,7 +13,8 @@ function parseEnvList(env) {
   if (!env) {
     return [];
   }
-  return env.split(' || ');
+  // https://stackoverflow.com/a/11457952/2771889
+  return env.match(/(".*?"|[^",\s]+)(?=\s*,|\s*$)/g);
 }
 
 // Set up rate-limiting to avoid abuse of the public CORS Anywhere server.
