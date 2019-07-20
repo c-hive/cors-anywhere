@@ -13,8 +13,9 @@ function parseEnvList(env) {
   if (!env) {
     return [];
   }
-  // https://stackoverflow.com/a/11457952/2771889
-  return env.match(/(".*?"|[^",\s]+)(?=\s*,|\s*$)/g);
+  // https://stackoverflow.com/a/57121244/2771889
+  // https://regex101.com/r/UL8kyy
+  return env.match(/(?<=")[^"]+(?="(\s*,|\s*$))|(?<=(^|,)\s*)([^,"\s][^,"]*[^,"\s])|([^,"\s])(?![^"]*"(\s*,|\s*$))(?=\s*(,|$))/g);
 }
 
 // Set up rate-limiting to avoid abuse of the public CORS Anywhere server.
