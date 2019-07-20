@@ -1,3 +1,5 @@
+*Note: This is slightly modified version of the original repo. It supports regexes for the `CORSANYWHERE_WHITELIST` setting. Regexes containing comma (`,`) must be sorrounded by double quotes. E.g. `"^http(s)?:\/\/localhost(:[0-9]{1,5})?$"`. It also adds a `package-lock.json` file with less vulnerabilities.*
+
 [![Build Status](https://travis-ci.org/Rob--W/cors-anywhere.svg?branch=master)](https://travis-ci.org/Rob--W/cors-anywhere)
 [![Coverage Status](https://coveralls.io/repos/github/Rob--W/cors-anywhere/badge.svg?branch=master)](https://coveralls.io/github/Rob--W/cors-anywhere?branch=master)
 
